@@ -7,12 +7,14 @@
     margin-left: auto;
 }
 
+
 .button {
     border-radius: 82px;
     width: 164px;
     height: 60px;
 }
 .hero {
+    background-color: black;
     background-image: url("../images/hero.png");
     background-size: cover;
     background-position: center;
