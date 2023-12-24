@@ -1,0 +1,31 @@
+.custom-navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar-nav {
+    margin-left: auto;
+}
+
+.button {
+    border-radius: 82px;
+    width: 164px;
+    height: 60px;
+}
+.hero {
+    background-image: url("../images/hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
