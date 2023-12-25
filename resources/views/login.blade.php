@@ -18,7 +18,9 @@
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
-                <button>Log In</button>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary custom-button" type="Login">Button</button>
+                </div>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
                     <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
