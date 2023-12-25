@@ -34,10 +34,41 @@
                 </ul>
             </div>
             <div class="d-flex justify-content-end">
-                <!-- Add your buttons here -->
-                <button class="button btn btn-outline-light mx-2">Masuk</button>
-                <button class="button btn btn-warning mx-2">Daftar</button>
+
+                @guest
+                <a class="button btn btn-outline-light mx-2 d-flex align-items-center justify-content-center" href="{{ url('/login') }}">Masuk</a>
+                <a class="button btn btn-warning mx-2 d-flex align-items-center justify-content-center" href="{{ url('/register') }}">Daftar</a>
+                @else
+                <!-- Display this content for authenticated users -->
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button class="ikon">
+                            <img src="{{ asset('images/ikon_search.png') }}" alt="search" width="20" height="20">
+                        </button>
+                    </form>
+                </div>
+
+                <button class="ikon">
+                    <img src="{{ asset('images/ikon_belanja.png') }}" alt="shopping" width="20" height="20">
+                </button>
+                <button class="ikon">
+                    <img src="{{ asset('images/ikon_akun.png') }}" alt="account" width="20" height="20">
+                </button>
+
+                <form id="logout-form" method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="button btn btn-warning mx-2 d-flex align-items-center justify-content-center">
+                        Logout
+                    </button>
+                </form>
+
+
+                @endguest
             </div>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
         </div>
     </nav>
 
