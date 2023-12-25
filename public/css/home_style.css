@@ -10,6 +10,7 @@
     color: #fff; /* Mengubah warna teks menjadi putih */
 }
 
+
 .button {
     border-radius: 82px;
     width: 140px;
@@ -17,8 +18,6 @@
 }
 
 .hero {
-    position: relative;
-    background-color: black;
     background-image: url("../images/hero.png");
     background-size: cover;
     background-position: center;
