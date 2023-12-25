@@ -28,34 +28,55 @@
                 <div class="order-info">
                     <div>
                         <h4><b>ID</b></h4>
-                        <p>1</p>
-                        <p>2</p>
+                        <p class="order-id">1</p>
                     </div>
                     <div>
                         <h4><b>Tanggal</b></h4>
                         <p>Senin, 25-12-2023</p>
-                        <p>Selasa, 26-12-2023</p>
                     </div>
                     <div>
                         <h4><b>Pesanan</b></h4>
                         <p>Milky Matcha</p>
-                        <p>Americano</p>
                     </div>
                     <div>
                         <h4><b>Ruangan</b></h4>
                         <p>Fur Room</p>
-                        <p>Scratch Room</p>
                     </div>
                     <div>
                         <h4><b>Total Harga</b></h4>
                         <p>Rp 15.000</p>
-                        <p>Rp 10.000</p>
+                    </div>
+                    <div class="order-actions">
+                        <button type="button" class="btn btn-warning edit-btn">Edit</button>
+                        <button type="button" class="btn btn-danger delete-btn">Delete</button>
                     </div>
                 </div>
             </div>
         </div>
         <button type="button" class="btn btn-primary">Tambah Pesanan</button>
     </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit Pesanan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="editedItem">Edit Item:</label>
+                    <input type="text" id="editedItem" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
