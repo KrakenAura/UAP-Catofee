@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,10 @@ use App\Http\Controllers\AuthController;
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return view('home0');
+    return view('home');
 });
 
 Route::get('/login', [PageController::class, 'loginPage']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/order_history', [OrderController::class, 'index'])->name('order_history');
