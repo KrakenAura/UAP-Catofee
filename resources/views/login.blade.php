@@ -12,11 +12,11 @@
 <body>
     <div class="container" id="container">
         <div class="form-container log-in-container">
-            <form action="#">
+            <form method="POST" action="{{ url('/login') }}">
                 <h1>Login</h1>
-
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                @csrf <!-- Add CSRF token -->
+                <input type="email" name="email" placeholder="Email" />
+                <input type="password" name="password" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
                 <button>Log In</button>
                 <div class="social-container">
