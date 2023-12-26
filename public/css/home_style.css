@@ -51,6 +51,11 @@
     width: 230px; /* Warna teks hitam */
 }
 
+.left-bot-btn button:hover {
+    background-color: #ffffff; 
+    color: #1a1a1a;/* Warna kuning yang berbeda saat dihover */
+}
+
 .ikon {
     background-color: transparent;
     transition-duration: 0.4s;
