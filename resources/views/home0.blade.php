@@ -82,7 +82,7 @@
         </form>
     </div>
     <!-- The Cats -->
-    <div class="cats text-center t-4">
+    <div class="cats text-center t-4 custom-width" id="cats-section">
         <h1>The Cats</h1>
         <p>Kucing-kucing di kafe kucing kami dirawat dengan penuh perhatian dan kasih sayang,</p>
         <p style="margin-top: -1rem;">memastikan bahwa mereka berada dalam kondisi kesehatan yang optimal.</p>
@@ -95,10 +95,11 @@
                 <img src="{{ asset('images/Jamal.png') }}" alt="" class="img-fluid" width="40%" />
                 <h5 style="margin-left: 7.5rem;">Jamal</h5>
             </div>
+            <button type="button" class="btn btn-primary btn-lg custom-large-button">Lihat Lainya >>></button>
         </div>
     </div>
 
-    <div class="operating-hour text-center">
+    <div class="operating-hour text-center custom-width" id="operating-hours-section">
         <h1>Operating Hours</h1>
         <div class="row justify-content-center">
             <div class="col-md-6">

@@ -141,3 +141,17 @@
 body {
     overflow-x: hidden;
 }
+
+.custom-width {
+    margin: 0 auto; 
+}
+
+button.custom-large-button.btn.btn-primary.btn-lg {
+    color: black;
+    font-size: 28px; 
+    width: 508px;
+    height: 60px;
+    background-color: #ffc107;
+    border-radius: 82px;
+    border-color: #ffc107; 
+}
