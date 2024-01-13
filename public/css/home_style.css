@@ -123,3 +123,16 @@
 .menu a:hover {
     color: #007bff;
 }
+
+.cats {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+.operating-hour {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+body {
+    overflow-x: hidden;
+}

@@ -1,10 +1,10 @@
 body {
-    background-color: #FFE600;
+    background-color: #ffe600;
 }
 
 .header-section {
-    background-color: #3A3A3A;
-    color: #FFFFFF;
+    background-color: #3a3a3a;
+    color: #ffffff;
     padding: 10px;
     text-align: center;
     margin-bottom: 20px;
@@ -21,7 +21,7 @@ h2 {
     width: 100%;
     margin-top: 20px;
     height: 500px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 .container {
@@ -29,30 +29,33 @@ h2 {
 }
 
 button.btn-primary {
-    background-color: #3A3A3A;
+    background-color: #3a3a3a;
     width: 100%;
     margin-top: 20px;
 }
 
-.order-info {
+.order-info-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
+.order-info-content {
+    display: flex;
+    justify-content: space-between;
+}
 
 .form-control {
-    color: #FFFFFF;
+    color: #ffffff;
     width: 50%;
     display: inline-block;
 }
 
 .search-btn i {
     border-radius: 15%;
-    border-color: #FFE600;
+    border-color: #ffe600;
     font-size: 18px;
     padding: 8px;
 }
-
 
 .search-btn i {
     font-size: 18px;

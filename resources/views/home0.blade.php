@@ -66,9 +66,6 @@
 
                 @endguest
             </div>
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
         </div>
     </nav>
 
@@ -83,6 +80,43 @@
             <button class="button btn btn-outline-warning mx-2">Reservasi Sekarang</button>
         </div>
     </div>
+    <!-- The Cats -->
+    <div class="cats text-center t-4">
+        <h1>The Cats</h1>
+        <p>Kucing-kucing di kafe kucing kami dirawat dengan penuh perhatian dan kasih sayang,</p>
+        <p style="margin-top: -1rem;">memastikan bahwa mereka berada dalam kondisi kesehatan yang optimal.</p>
+        <div class="row gx-0 justify-content-center">
+            <div class="col-md-6 mb-3 d-flex flex-column align-items-end text-center pe-3">
+                <img src="{{ asset('images/Jamal.png') }}" alt="" class="img-fluid" width="40%" />
+                <h5 style="margin-right: 7.5rem;">Jamal</h5>
+            </div>
+            <div class="col-md-6 mb-3 d-flex flex-column align-items-start text-center ps-3">
+                <img src="{{ asset('images/Jamal.png') }}" alt="" class="img-fluid" width="40%" />
+                <h5 style="margin-left: 7.5rem;">Jamal</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="operating-hour text-center">
+        <h1>Operating Hours</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Weekdays</h1>
+                <p>Senin - Jumat</p>
+                <p>08.00 - 21.00</p>
+                <p>Rp.30.000/jam/orang</p>
+            </div>
+            <div class="col-md-6">
+                <h1>Weekdays</h1>
+                <p>Sabtu &amp Minggu</p>
+                <p>09.00 - 22.00</p>
+                <p>Rp.50.000/jam/orang</p>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

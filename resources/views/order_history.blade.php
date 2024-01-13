@@ -24,33 +24,46 @@
 
     <div class="container">
         <div class="card">
-            @foreach ($orders as $order)
+
             <div class="container">
-                <div class="order-info">
+                <div class="order-info-header">
                     <div>
                         <h4><b>ID</b></h4>
-                        <p>{{ $order->id }}</p>
                     </div>
                     <div>
                         <h4><b>Tanggal</b></h4>
-                        <p>{{ $order->date }}</p>
                     </div>
                     <div>
                         <h4><b>Pesanan</b></h4>
-                        <p>{{ $order->menu_name }}</p>
                     </div>
                     <div>
                         <h4><b>Ruangan</b></h4>
-                        <p>{{ $order->room }}</p>
                     </div>
                     <div>
                         <h4><b>Total Harga</b></h4>
+                    </div>
+                </div>
+                @foreach ($orders as $order)
+                <div class="order-info-content">
+                    <div>
+                        <p>{{ $order->id }}</p>
+                    </div>
+                    <div>
+                        <p>{{ $order->date }}</p>
+                    </div>
+                    <div>
+                        <p>{{ $order->menu_name }}</p>
+                    </div>
+                    <div>
+                        <p>{{ $order->room }}</p>
+                    </div>
+                    <div>
                         <p>Rp {{ $order->total_price }}</p>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
-        @endforeach
         <button type="button" class="btn btn-primary">Tambah Pesanan</button>
     </div>
 
