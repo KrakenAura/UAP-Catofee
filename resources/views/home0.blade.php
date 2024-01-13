@@ -76,9 +76,10 @@
         <p>dijadikan sebagai teman bersantai sembari menikmati kopi</p>
         <p>melepas penat dan beban hidup.</p>
         <!-- Add more content or customize as needed -->
-        <div class="left-bot-btn">
-            <button class="button btn btn-outline-warning mx-2">Reservasi Sekarang</button>
-        </div>
+        <form method="GET" action="{{ url('/login') }}" class="left-bot-btn">
+            @csrf
+            <button type="submit" class="button btn btn-outline-warning mx-2">Reservasi Sekarang</button>
+        </form>
     </div>
     <!-- The Cats -->
     <div class="cats text-center t-4">

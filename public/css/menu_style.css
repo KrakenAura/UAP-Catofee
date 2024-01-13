@@ -51,11 +51,6 @@
     width: 230px; /* Warna teks hitam */
 }
 
-.left-bot-btn button:hover {
-    background-color: #ffffff; 
-    color: #1a1a1a;/* Warna kuning yang berbeda saat dihover */
-}
-
 .ikon {
     background-color: transparent;
     transition-duration: 0.4s;
@@ -129,15 +124,26 @@
     color: #007bff;
 }
 
-.cats {
-    background-color: #1e1e1e;
-    color: #fff;
-}
-.operating-hour {
-    background-color: #1e1e1e;
-    color: #fff;
+.bottom_page{
+    background-color: black;
+    justify-content: center;
 }
 
-body {
-    overflow-x: hidden;
+.order-form {
+    margin-top: 20px; 
+    background-color: #ffc107;
 }
+
+.btn-custom {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+#menuSelection,
+        #roomSelection,
+        #totalPrice {
+            
+            width: 100%; /* Set the desired width */
+            max-width: 400px; /* Optional: Set a maximum width */
+        }
