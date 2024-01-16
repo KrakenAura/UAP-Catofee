@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-KyZXEAg3QhqLMpG8r+Knujsl5+z0I5t9Y0P4pWtnjO6ZvJ5e6UxZjzjd23Gvj8qbk5F36bOgdf1k2xjK1l5U2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ asset('css/home_style.css') }}">
 </head>
@@ -116,6 +117,25 @@
             </div>
         </div>
     </div>
+
+    <!-- Copyright Section -->
+    <div class="copyright-section text-center py-4" style="background-color: #ffd700;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Cattofee. Hak Cipta dilindungi oleh undang-undang.
+                        Dilarang mengambil foto dan tulisan tanpa izin dari Cattofee.</p>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end align-items-center">
+                    <!-- Font Awesome icons -->
+                    <a href="#" target="_blank" class="me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" class="me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 
