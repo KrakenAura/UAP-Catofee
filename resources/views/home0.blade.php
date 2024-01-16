@@ -85,7 +85,7 @@
     <div class="cats text-center t-4 custom-width" id="cats-section">
         <h1>The Cats</h1>
         <p>Kucing-kucing di kafe kucing kami dirawat dengan penuh perhatian dan kasih sayang,</p>
-        <p style="margin-top: -1rem;">memastikan bahwa mereka berada dalam kondisi kesehatan yang optimal.</p>
+        <p style="margin-top: -1rem; margin-bottom: 50px;">memastikan bahwa mereka berada dalam kondisi kesehatan yang optimal.</p>
         <div class="row gx-0 justify-content-center">
             <div class="col-md-6 mb-3 d-flex flex-column align-items-end text-center pe-3">
                 <img src="{{ asset('images/Jamal.png') }}" alt="" class="img-fluid" width="40%" />
@@ -95,7 +95,7 @@
                 <img src="{{ asset('images/Jamal.png') }}" alt="" class="img-fluid" width="40%" />
                 <h5 style="margin-left: 7.5rem;">Jamal</h5>
             </div>
-            <button type="button" class="btn btn-primary btn-lg custom-large-button">Lihat Lainya >>></button>
+            <button type="button" class="btn btn-primary btn-lg custom-large-button" style="margin-top: 40px;">Lihat Lainya >>></button>
         </div>
     </div>
 
