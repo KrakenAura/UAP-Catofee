@@ -28,5 +28,3 @@ Route::get('/login', [PageController::class, 'loginPage']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/order_history', [OrderController::class, 'index'])->name('order_history');
-Route::get('/about_us', [AboutController::class, 'index']);
-Route::get('/menu', [OrderController::class, 'menu']);
