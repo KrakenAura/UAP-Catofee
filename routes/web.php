@@ -5,6 +5,8 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CatsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +30,6 @@ Route::get('/login', [PageController::class, 'loginPage']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/order_history', [OrderController::class, 'index'])->name('order_history');
+Route::get('/cats', [CatsController::class, 'cats_index']);
+Route::get('/menu', [OrderController::class, 'menu']);
+Route::get('/about_us', [AboutController::class, 'index']);

@@ -38,7 +38,6 @@
     margin-bottom: 80px;
 }
 
-
 .ikon {
     background-color: transparent;
     transition-duration: 0.4s;
@@ -117,29 +116,27 @@
     color: #fff;
 }
 
-.cats2{
-    
+.cats2 {
     background-color: white;
     color: #1e1e1e;
 }
-
 
 body {
     overflow-x: hidden;
 }
 
 .custom-width {
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 button.custom-large-button.btn.btn-primary.btn-lg {
     color: black;
-    font-size: 28px; 
+    font-size: 28px;
     width: 508px;
     height: 60px;
     background-color: #ffc107;
     border-radius: 82px;
-    border-color: #ffc107; 
+    border-color: #ffc107;
 }
 
 .cats {
@@ -158,12 +155,12 @@ button.custom-large-button.btn.btn-primary.btn-lg {
     height: 32px;
 }
 
-h5{
+#cats-section h5 {
     font-size: 4.5rem;
 }
 
-p{
-    font-size: 2rem
+#cats-section p {
+    font-size: 2rem;
 }
 
 /* CSS untuk menambahkan border rounded dan warna pada foto blok pertama */
