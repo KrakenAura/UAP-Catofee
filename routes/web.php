@@ -20,7 +20,7 @@ use App\Http\Controllers\OrderController;
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return view('home0');
+    return view('cats');
 });
 
 Route::get('/login', [PageController::class, 'loginPage']);
