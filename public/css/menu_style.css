@@ -124,13 +124,13 @@
     color: #007bff;
 }
 
-.bottom_page{
-    background-color: black;
+.bottom_page {
+    background-color: #1e1e1e;
     justify-content: center;
 }
 
 .order-form {
-    margin-top: 20px; 
+    margin-top: 20px;
     background-color: #ffc107;
 }
 
@@ -141,9 +141,8 @@
 }
 
 #menuSelection,
-        #roomSelection,
-        #totalPrice {
-            
-            width: 100%; /* Set the desired width */
-            max-width: 400px; /* Optional: Set a maximum width */
-        }
+#roomSelection,
+#totalPrice {
+    width: 100%; /* Set the desired width */
+    max-width: 400px; /* Optional: Set a maximum width */
+}

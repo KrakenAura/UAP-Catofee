@@ -19,7 +19,7 @@
                 <input type="password" name="password" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-primary custom-button" type="Login">Button</button>
+                    <button class="btn btn-primary custom-button" type="Login">Log In</button>
                 </div>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
