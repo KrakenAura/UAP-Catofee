@@ -6,6 +6,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CatsController;
+use App\Http\Controllers\DashboardController;
+
 
 
 /*
@@ -33,3 +35,4 @@ Route::get('/order_history', [OrderController::class, 'index'])->name('order_his
 Route::get('/cats', [CatsController::class, 'cats_index']);
 Route::get('/menu', [OrderController::class, 'menu']);
 Route::get('/about_us', [AboutController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index']);
