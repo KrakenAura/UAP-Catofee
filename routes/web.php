@@ -21,7 +21,7 @@ use App\Http\Controllers\OrderController;
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return view('cats');
+    return view('profile');
 });
 
 Route::get('/login', [PageController::class, 'loginPage']);
