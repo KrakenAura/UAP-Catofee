@@ -104,4 +104,12 @@ class OrderController extends Controller
         // Redirect to the orders index page
         return redirect()->route('orders.index');
     }
+
+    public function menu()
+    {
+        // Fetch all orders from the database
+
+        // Return a view with the orders data
+        return view('menu');
+    }
 }

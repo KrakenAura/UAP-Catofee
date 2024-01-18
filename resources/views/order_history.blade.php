@@ -1,93 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order History</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="{{ asset('css/order_history.css') }}">
-</head>
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/order_history.css') }}">
+@endsection
 
-<body>
-    <header>
-        <div class="header-section">
-            <h2>Riwayat Pemesanan</h2>
-            <input class="form-control" type="text" placeholder="Cari...">
-            <button class="search-btn"><i class="fas fa-search"></i></button>
-        </div>
-    </header>
 
-    <div class="container">
-        <div class="card">
-
-            <div class="container">
-                <div class="order-info-header">
-                    <div>
-                        <h4><b>ID</b></h4>
-                    </div>
-                    <div>
-                        <h4><b>Tanggal</b></h4>
-                    </div>
-                    <div>
-                        <h4><b>Pesanan</b></h4>
-                    </div>
-                    <div>
-                        <h4><b>Ruangan</b></h4>
-                    </div>
-                    <div>
-                        <h4><b>Total Harga</b></h4>
-                    </div>
-                </div>
-                @foreach ($orders as $order)
-                <div class="order-info-content">
-                    <div>
-                        <p>{{ $order->id }}</p>
-                    </div>
-                    <div>
-                        <p>{{ $order->date }}</p>
-                    </div>
-                    <div>
-                        <p>{{ $order->menu_name }}</p>
-                    </div>
-                    <div>
-                        <p>{{ $order->room }}</p>
-                    </div>
-                    <div>
-                        <p>Rp {{ $order->total_price }}</p>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary">Tambah Pesanan</button>
+@section('content')
+<div>
+    <div class="header-section">
+        <br>
+        <br>
+        <h2>Riwayat Pemesanan</h2>
+        <input class="form-control" type="text" placeholder="Cari...">
+        <button class="search-btn"><i data-feather="search"></i></button>
     </div>
+</div>
 
-    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editModalLabel">Edit Pesanan</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+<div class="container">
+    <div class="card">
+
+        <div class="container">
+            <div class="order-info-header">
+                <div>
+                    <h4><b>ID</b></h4>
                 </div>
-                <div class="modal-body">
-                    <label for="editedItem">Edit Item:</label>
-                    <input type="text" id="editedItem" class="form-control">
+                <div>
+                    <h4><b>Tanggal</b></h4>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                <div>
+                    <h4><b>Pesanan</b></h4>
                 </div>
+                <div>
+                    <h4><b>Ruangan</b></h4>
+                </div>
+                <div>
+                    <h4><b>Total Harga</b></h4>
+                </div>
+            </div>
+            @foreach ($orders as $order)
+            <div class="order-info-content">
+                <div>
+                    <p>{{ $order->id }}</p>
+                </div>
+                <div>
+                    <p>{{ $order->date }}</p>
+                </div>
+                <div>
+                    <p>{{ $order->menu_name }}</p>
+                </div>
+                <div>
+                    <p>{{ $order->room }}</p>
+                </div>
+                <div>
+                    <p>Rp {{ $order->total_price }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary">Tambah Pesanan</button>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Edit Pesanan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <label for="editedItem">Edit Item:</label>
+                <input type="text" id="editedItem" class="form-control">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
-
-</body>
-
-</html>
+</div>
+@endsection
