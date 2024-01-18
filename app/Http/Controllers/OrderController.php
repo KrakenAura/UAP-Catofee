@@ -16,7 +16,10 @@ class OrderController extends Controller
     public function index()
     {
         // Fetch orders for the logged-in user
-        $orders = Auth::user()->orders;
+        // $orders = Auth::user()->orders()->get();
+        $orders = \App\Models\User::find(Auth::id())->orders()->get();
+
+
 
         // Return a view with the orders data
         return view('order_history', ['orders' => $orders]);
@@ -37,11 +40,11 @@ class OrderController extends Controller
         ]);
 
         // Calculate total price based on menu price and quantity
-        $menu = Menu::findOrFail($validatedData['menu_id']);
+        $menu = Menu::findOrFail($validatedData['menu_id']);;
         $totalPrice = $menu->price * $validatedData['qty'];
 
         // Create a new order associated with the logged-in user
-        $order = Auth::user()->orders()->create([
+        $order = \App\Models\User::find(Auth::id())->orders()->create([
             'menu_id' => $validatedData['menu_id'],
             'qty' => $validatedData['qty'],
             'total_price' => $totalPrice,
@@ -60,7 +63,7 @@ class OrderController extends Controller
     public function show(string $id)
     {
         // Find the order by ID for the logged-in user
-        $order = Auth::user()->orders()->findOrFail($id);
+        $order = \App\Models\User::find(Auth::id())->orders()->findOrFail($id);
 
         // Return a view with the order details
         return view('orders.show', ['order' => $order]);
@@ -80,7 +83,7 @@ class OrderController extends Controller
         ]);
 
         // Find the order by ID for the logged-in user
-        $order = Auth::user()->orders()->findOrFail($id);
+        $order = \App\Models\User::find(Auth::id())->orders()->findOrFail($id);
 
         // Update the order data
         $order->update([
@@ -100,7 +103,7 @@ class OrderController extends Controller
     public function destroy(string $id)
     {
         // Find and delete the order by ID for the logged-in user
-        Auth::user()->orders()->findOrFail($id)->delete();
+        \App\Models\User::find(Auth::id())->orders()->findOrFail($id)->delete();
 
         // Redirect to the orders index page
         return redirect()->route('orders.index');
