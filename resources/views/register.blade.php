@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LoginPage</title>
+    <title>Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('css/login_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/register_style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="container" id="container">
         <div class="form-container log-in-container">
-            <form method="POST" action="{{ url('/login') }}">
-                <h1>Login</h1>
-                @csrf <!-- Add CSRF token -->
+            <form method="POST" action="{{ url('/register') }}">
+                <h1>Sign Up</h1>
+                @csrf
+                <input type="name" name="name" placeholder="Name" />
                 <input type="email" name="email" placeholder="Email" />
                 <input type="password" name="password" placeholder="Password" />
+                <input type="password" name="password_confirmation" placeholder="Confirm Password" />
+
                 <a href="#">Forgot your password?</a>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-primary custom-button" type="Login">Log In</button>
+                    <button class="btn btn-primary custom-button" type="Login">Sign Up</button>
                 </div>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
                     <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
                     <a href="#" class="social"><i class="fab fa fa-google fa-2x"></i></a>
-                    <h5>Still don't have an account?<button class="text btn" onclick="window.location.href='/register'">Sign Up</button>
+                    <h5>Already have an account?<button class="text btn" onclick="window.location.href='/login'">Log In</button>
                     </h5>
                 </div>
             </form>
@@ -40,8 +43,5 @@
         </div>
     </div>
 </body>
-
-</html>
-
 
 </html>

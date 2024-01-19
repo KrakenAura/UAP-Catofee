@@ -116,6 +116,7 @@
 }
 
 .order-form {
+    margin-top: 20px;
     background-color: #ffc107;
     margin: auto 0;
     text-align: center;
@@ -136,22 +137,4 @@
 #totalPrice {
     width: 100%; /* Set the desired width */
     max-width: 400px; /* Optional: Set a maximum width */
-    margin: 0 auto;
-
-}
-
-
-.menu-group {
-    margin-top: 40px;
-    display:flex;
-    justify-content: space-around;/* Mengatur jarak antara menu-menu */
-}
-
-.menu-item {
-    margin-bottom: 20px; /* Menambahkan margin bawah pada setiap menu */
-}
-
-
-.form-control {
-    margin-bottom: 15px; /* Memberikan sedikit ruang antara elemen formulir */
 }
