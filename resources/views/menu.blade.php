@@ -61,22 +61,26 @@
     </div>
 </div>
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
 <div class="order-form pb-4">
     <br>
     <h2>Order Form</h2>
-    <form>
+    <form method="POST" action="{{ route('orders.store') }}">
+
+        @csrf
         <div class="form-group">
             <label for="menuSelection">Menu Selection</label>
-            <input type="text" class="form-control" id="menuSelection" name="menuSelection" placeholder="Enter menu name">
+            <select class="form-control" id="menuSelection" name="menu_id">
+                <option value="1">Menu 1</option>
+                <option value="2">Menu 2</option>
+                <option value="3">Menu 3</option>
+                <option value="4">Menu 4</option>
+            </select>
         </div>
+        <input type="hidden" class="form-control" id="username" name="username" value="{{ auth()->check() ? auth()->user()->username : '' }}" readonly>
 
         <div class="form-group">
             <label for="roomSelection">Room Selection</label>
-            <select class="form-control" id="roomSelection" name="roomSelection">
+            <select class="form-control" id="roomSelection" name="room">
                 <option value="room1">Room 1</option>
                 <option value="room2">Room 2</option>
             </select>
@@ -84,11 +88,44 @@
 
         <div class="form-group">
             <label for="totalPrice">Total Price</label>
-            <input type="text" class="form-control " id="totalPrice" name="totalPrice" readonly>
+            <input type="text" class="form-control" id="totalPrice" name="total_price" readonly>
         </div>
-        <br>
+
         <button type="submit" class="btn-custom">Place Order</button>
     </form>
 </div>
+<script>
+    $(document).ready(function() {
+        // Define menu prices
+        const menuPrices = {
+            '1': 10.99,
+            '2': 12.99,
+            '3': 14.99,
+            '4': 16.99,
+        };
+
+        function updateTotalPrice() {
+            const menuSelection = $('#menuSelection').val();
+            const roomSelection = $('#roomSelection').val();
+            const quantity = 1;
+
+            // Get the price based on the selected menu
+            const selectedPrice = menuPrices[menuSelection] || 0;
+
+            // Calculate total price based on the selected menu, room, and quantity
+            const totalPrice = selectedPrice * quantity;
+
+            // Update the total price input field
+            $('#totalPrice').val(totalPrice.toFixed(2));
+        }
+
+        // Bind the updateTotalPrice function to the change event of menuSelection and roomSelection
+        $('#menuSelection').on('change', updateTotalPrice);
+
+        // Call the updateTotalPrice function initially to set the initial total price
+        updateTotalPrice();
+    });
+</script>
+
 
 @endsection

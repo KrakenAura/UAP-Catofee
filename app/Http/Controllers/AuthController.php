@@ -14,11 +14,13 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
+            $user = Auth::user();
             return redirect()->intended('/');
         }
 
         return redirect('/login')->with('error', 'Invalid login credentials');
     }
+
 
     public function logout()
     {
@@ -50,20 +52,5 @@ class AuthController extends Controller
         // Auth::login($user);
 
         return redirect('/login')->with('success', 'Registration successful. You can now log in.');
-    }
-
-    public function updateProfile(Request $request)
-    {
-        $user = Auth::user();
-
-        $request->validate([
-            'name' => 'required|string|max:255',
-        ]);
-
-        $user = User::update([
-            'name' => $request->input('name'),
-        ]);
-
-        return redirect('/profile')->with('success', 'Profile updated successfully.');
     }
 }

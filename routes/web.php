@@ -35,8 +35,10 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/update-profile', [AuthController::class, 'updateProfile'])->name('update-profile');
 
-Route::get('/order_history', [OrderController::class, 'index'])->name('order_history');
+Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
 Route::get('/cats', [CatsController::class, 'cats_index']);
 Route::get('/menu', [OrderController::class, 'menu']);
 Route::get('/about_us', [AboutController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/order-history', [OrderController::class, 'orderHistory'])->name('order.history');
+Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
