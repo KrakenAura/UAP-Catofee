@@ -10,6 +10,10 @@ class PageController extends Controller
     {
         return view('login');
     }
+    public function RegisterPage()
+    {
+        return view('register');
+    }
     public function OrderHistoryPage()
     {
         return view('order_history');

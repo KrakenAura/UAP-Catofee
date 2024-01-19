@@ -31,7 +31,7 @@
             <img src="{{ asset('images/Jamal.png') }}" alt="" class="img-fluid" width="40%" />
             <h5 style="margin-left: 7.5rem;">Jamal</h5>
         </div>
-        <button type="button" class="btn btn-primary btn-lg custom-large-button" style="margin-top: 40px;">Lihat Lainya >>></button>
+        <button type="button" class="btn btn-primary btn-lg custom-large-button" style="margin-top: 40px;" onclick="window.location.href='/cats'">Lihat Lainya >>></button>
     </div>
 </div>
 
