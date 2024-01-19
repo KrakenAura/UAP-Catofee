@@ -33,7 +33,6 @@ Route::get('/register', [PageController::class, 'registerPage']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
-Route::post('/update-profile', [AuthController::class, 'updateProfile'])->name('update-profile');
 
 Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
 Route::get('/cats', [CatsController::class, 'cats_index']);
