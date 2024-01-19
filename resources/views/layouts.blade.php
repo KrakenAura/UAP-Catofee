@@ -34,9 +34,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about_us">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact_us">Contact Us</a>
-                    </li>
+
                 </ul>
             </div>
             <div class="d-flex justify-content-end">

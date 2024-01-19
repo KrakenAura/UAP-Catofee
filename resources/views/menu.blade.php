@@ -69,18 +69,21 @@
         @csrf
         <div class="form-group">
             <label for="menuSelection">Menu Selection</label>
-            <select class="form-control" id="menuSelection" name="menu_id">
-                <option value="1">Menu 1</option>
-                <option value="2">Menu 2</option>
-                <option value="3">Menu 3</option>
-                <option value="4">Menu 4</option>
+            <select class="form-control" id="menuSelection" name="menu_id" placeholder="Select a menu">
+                <option value="" disabled selected>Select a menu</option>
+                <option value="1">Roti Bakar</option>
+                <option value="2">Wafel Coklat</option>
+                <option value="3">Milky Matcha</option>
+                <option value="4">Americano</option>
             </select>
         </div>
+
         <input type="hidden" class="form-control" id="username" name="username" value="{{ auth()->check() ? auth()->user()->username : '' }}" readonly>
 
         <div class="form-group">
             <label for="roomSelection">Room Selection</label>
-            <select class="form-control" id="roomSelection" name="room">
+            <select class="form-control" id="roomSelection" name="room" placeholder="Select a room">
+                <option value="" disabled selected>Select a room</option>
                 <option value="room1">Room 1</option>
                 <option value="room2">Room 2</option>
             </select>
