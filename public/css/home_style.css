@@ -129,13 +129,15 @@
     color: #007bff;
 }
 
-.cats {
+.cats, .location{
     background-color: #1e1e1e;
     color: #fff;
 }
+
 .operating-hour {
     background-color: #1e1e1e;
     color: #fff;
+    padding-bottom: 5%;
 }
 
 body {
@@ -163,6 +165,12 @@ button.custom-large-button.btn.btn-primary.btn-lg {
     margin: 0 auto;
 }
 
+.mini-menu, .location{
+    padding-top: 5%;
+    padding-bottom: 10%;
+    margin: 0 auto;
+}
+
 #cats-section h1 {
     margin-bottom: 80px;
 }
@@ -175,3 +183,24 @@ button.custom-large-button.btn.btn-primary.btn-lg {
 .h5{
     font-size: xx-large
 }
+
+#location h1{
+    margin-right: 30px;
+}
+
+.cats img.rounded-border-white {
+    border: 7px solid white;
+    border-radius: 10px; /* Sesuaikan dengan keinginan Anda */
+}
+
+.menu-group {
+   
+    margin-top: 40px;
+    display:flex;
+    justify-content: space-around;/* Mengatur jarak antara menu-menu */
+}
+
+.menu-item {
+    margin-bottom: 20px; /* Menambahkan margin bawah pada setiap menu */
+}
+

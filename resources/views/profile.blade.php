@@ -17,8 +17,8 @@
             <div class="profile-picture">
                 <img src="path/to/profile-picture.jpg" alt="Profile Picture">
             </div>
-            <h2>Brahman</h2>
-
+            <h2 id="profile-name"></h2>
+            <button onclick="changeName()" class="me-2 custom-feather-icon" data-feather="edit-2"></button>
         </div>
 
         <ul class="menu-list">
@@ -32,7 +32,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script>
         feather.replace();
+
+        function changeName() {
+            var newName = prompt("Enter new name:");
+            if (newName !== null) {
+                document.getElementById("profile-name").innerText = newName;
+            }
+        }
     </script>
+
 
 </body>
 
