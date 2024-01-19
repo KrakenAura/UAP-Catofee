@@ -45,21 +45,21 @@
                 <a class="button btn btn-outline-light mx-2 d-flex align-items-center justify-content-center" href="{{ url('/login') }}">Masuk</a>
                 <a class="button btn btn-warning mx-2 d-flex align-items-center justify-content-center" href="{{ url('/register') }}">Daftar</a>
                 @else
-                <div class="search-container">
+                <!-- <div class="search-container">
                     <form action="/action_page.php">
                         <input type="text" placeholder="Search.." name="search">
                         <button class="ikon">
                             <img src="{{ asset('images/ikon_search.png') }}" alt="search" width="20" height="20">
                         </button>
                     </form>
-                </div>
+                </div> -->
 
-                <button class="ikon">
+                <button class="ikon" onclick="window.location.href='/order-history'">
                     <img src="{{ asset('images/ikon_belanja.png') }}" alt="shopping" width="20" height="20">
                 </button>
-                <button class="ikon">
+                <!-- <button class="ikon">
                     <img src="{{ asset('images/ikon_akun.png') }}" alt="account" width="20" height="20">
-                </button>
+                </button> -->
 
                 <form id="logout-form" method="POST" action="{{ route('logout') }}">
                     @csrf

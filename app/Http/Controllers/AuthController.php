@@ -52,4 +52,5 @@ class AuthController extends Controller
 
         return redirect('/login')->with('success', 'Registration successful. You can now log in.');
     }
+    
 }
