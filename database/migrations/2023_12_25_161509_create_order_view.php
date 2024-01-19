@@ -17,7 +17,6 @@ return new class extends Migration
             CREATE VIEW order_view AS
             SELECT
                 o.id,
-                o.qty,
                 o.total_price,
                 o.room,
                 o.date,

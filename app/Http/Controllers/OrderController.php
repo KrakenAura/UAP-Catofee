@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\OrderView;
+use Carbon\Carbon;
 use App\Models\Menu;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
@@ -30,31 +34,26 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        // Validate the request data
+
+        $currentDate = Carbon::now()->toDateString();
         $validatedData = $request->validate([
             'menu_id' => 'required|exists:menu,id',
-            'qty' => 'required|integer|min:1',
             'room' => 'required|string|max:255',
-            'date' => 'required|date',
-            'customer_name' => 'required|string|max:255',
+            'total_price' => 'required|numeric|min:0',
+            'username' => 'required|string|max:255',
         ]);
 
-        // Calculate total price based on menu price and quantity
-        $menu = Menu::findOrFail($validatedData['menu_id']);;
-        $totalPrice = $menu->price * $validatedData['qty'];
-
-        // Create a new order associated with the logged-in user
-        $order = \App\Models\User::find(Auth::id())->orders()->create([
+        $order = Order::create([
+            'user_id' => auth()->id(),
             'menu_id' => $validatedData['menu_id'],
-            'qty' => $validatedData['qty'],
-            'total_price' => $totalPrice,
             'room' => $validatedData['room'],
-            'date' => $validatedData['date'],
-            'customer_name' => $validatedData['customer_name'],
+            'total_price' => $validatedData['total_price'],
+            'customer_name' => $validatedData['username'],
+            'date' => $currentDate,
         ]);
 
-        // Redirect to the order details page
-        return redirect()->route('orders.show', ['id' => $order->id]);
+
+        return redirect()->route('order.history');
     }
 
     /**
@@ -67,6 +66,16 @@ class OrderController extends Controller
 
         // Return a view with the order details
         return view('orders.show', ['order' => $order]);
+    }
+
+    public function orderHistory()
+    {
+        // Find the order by ID for the logged-in user
+        $orders =
+            DB::table('order_view')->where('customer_name',  auth()->check() ? auth()->user()->username : '')->get();
+
+        // Return a view with the order details
+        return view('order_history', ['orders' => $orders]);
     }
 
     /**

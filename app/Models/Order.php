@@ -16,15 +16,14 @@ class Order extends Model
      * @var array
      */
 
-    protected $table = 'order_view';
+    protected $table = 'Orders';
     protected $fillable = [
-        'menu_id',
-        'qty',
-        'total_price',
-        'room',
-        'date',
         'user_id',
+        'menu_id',
+        'room',
+        'total_price',
         'customer_name',
+        'date',
         'status',
     ];
 

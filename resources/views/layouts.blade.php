@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset('css/layouts_style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-KJX5FZIzvYb5JpbIMCO0CAnC5q5zqjIww3QVg4oLqZ13KeFwBIURtC8AsiR1OVfN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 
 <body>

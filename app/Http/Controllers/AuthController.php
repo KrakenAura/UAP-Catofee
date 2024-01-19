@@ -13,11 +13,13 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
+            $user = Auth::user();
             return redirect()->intended('/');
         }
 
         return redirect('/login')->with('error', 'Invalid login credentials');
     }
+
 
     public function logout()
     {
