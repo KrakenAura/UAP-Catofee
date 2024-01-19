@@ -39,5 +39,6 @@ Route::get('/cats', [CatsController::class, 'cats_index']);
 Route::get('/menu', [OrderController::class, 'menu']);
 Route::get('/about_us', [AboutController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard-customer', [DashboardController::class, 'customer']);
 Route::get('/order-history', [OrderController::class, 'orderHistory'])->name('order.history');
 Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');

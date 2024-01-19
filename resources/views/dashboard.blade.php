@@ -81,17 +81,8 @@
 
                   <!-- /.progress-group -->
                   <div class="progress-group">
-                    Goal Completions
-                    <span class="float-right"><b>200</b>/300</span>
-                    <div class="progress progress-sm">
-                      <div class="progress-bar bg-success" style="width: 66.67%"></div>
-                    </div>
-                  </div>
-
-                  <!-- /.progress-group -->
-                  <div class="progress-group">
                     Total Revenue
-                    <span class="float-right"><b>15</b>/30</span>
+                    <span class="float-right"><b>111</b>/200</span>
                     <div class="progress progress-sm">
                       <div class="progress-bar bg-warning" style="width: 50%"></div>
                     </div>
@@ -132,7 +123,7 @@
       data: [50, 45, 30, 25, 40],
       fill: false,
     }, {
-      label: 'Total Revenue per 1000',
+      label: 'Total Revenue in million',
       borderColor: '#f39c12',
       data: [20, 25, 18, 22, 26],
       fill: false,

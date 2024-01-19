@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('dashboard');
     }
     public function cats()
@@ -15,7 +16,7 @@ class DashboardController extends Controller
     }
     public function customer()
     {
-        return view('dashboard');
+        return view('dashboard_customer');
     }
     public function orders()
     {
