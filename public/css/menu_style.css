@@ -18,7 +18,7 @@
 
 .hero {
     background-color: #000;
-    background-image: url("../images/hero.png");
+    background-image: url("../images/coffee-shop.jpg");
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -35,20 +35,6 @@
 .hero h1 {
     margin-left: 10px;
     font-size: 70px;
-}
-.hero p {
-    margin-bottom: 10px;
-    margin-left: 10px;
-    font-size: x-large;
-}
-.left-bot-btn {
-    margin-top: 10px; /* Menambahkan ruang di atas tombol */
-}
-
-.left-bot-btn button {
-    background-color: #ffc107; /* Warna kuning */
-    color: #000;
-    width: 230px; /* Warna teks hitam */
 }
 
 .ikon {
@@ -130,14 +116,19 @@
 }
 
 .order-form {
-    margin-top: 20px;
     background-color: #ffc107;
+    margin: auto 0;
+    text-align: center;
 }
 
 .btn-custom {
-    background-color: black;
-    color: white;
-    border-color: black;
+    background-color: #1e1e1e; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    border: none; /* Menghapus border tombol */
+    padding: 10px 20px; /* Memberikan padding pada tombol */
+    border-radius: 5px; /* Memberikan sudut bulat pada tombol */
+    cursor: pointer; /* Mengubah kursor saat di atas tombol */
+    margin: 0 auto;
 }
 
 #menuSelection,
@@ -145,4 +136,22 @@
 #totalPrice {
     width: 100%; /* Set the desired width */
     max-width: 400px; /* Optional: Set a maximum width */
+    margin: 0 auto;
+
+}
+
+
+.menu-group {
+    margin-top: 40px;
+    display:flex;
+    justify-content: space-around;/* Mengatur jarak antara menu-menu */
+}
+
+.menu-item {
+    margin-bottom: 20px; /* Menambahkan margin bawah pada setiap menu */
+}
+
+
+.form-control {
+    margin-bottom: 15px; /* Memberikan sedikit ruang antara elemen formulir */
 }
