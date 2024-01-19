@@ -25,7 +25,7 @@ use App\Http\Controllers\DashboardController;
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return view('home0');
+    return view('dashboard_order');
 });
 
 Route::get('/login', [PageController::class, 'loginPage']);
