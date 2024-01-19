@@ -12,10 +12,14 @@
     <p>dijadikan sebagai teman bersantai sembari menikmati kopi</p>
     <p>melepas penat dan beban hidup.</p>
     <!-- Add more content or customize as needed -->
+    @if(Auth::check())
+    <a href="{{ url('/menu') }}" class="button btn btn-warning mx-2">Menu</a>
+    @else
     <form method="GET" action="{{ url('/login') }}" class="left-bot-btn">
         @csrf
         <button type="submit" class="button btn btn-outline-warning mx-2">Reservasi Sekarang</button>
     </form>
+    @endif
 </div>
 <!-- The Cats -->
 <div class="cats text-center t-4 custom-width" id="cats-section">
