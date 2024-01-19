@@ -167,3 +167,45 @@ button.custom-large-button.btn.btn-primary.btn-lg {
 #cats-section h1 {
     margin-bottom: 80px;
 }
+
+
+.story {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.story p {
+    margin-bottom: 1.5em;
+}
+
+.contact-us {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.contact-us h2 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-us p {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}

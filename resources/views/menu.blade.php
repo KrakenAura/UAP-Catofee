@@ -20,8 +20,8 @@
             <div class="card menu-item" style="width: 18rem;">
                 <img src="{{ asset('images/roti-bakar.jpg') }}" class="card-img-top img-fluid" alt="Menu 1">
                 <div class="card-body">
-                    <h5 class="card-title">Menu 1</h5>
-                    <p class="card-text">Price: $10.99</p>
+                    <h5 class="card-title">Roti Bakar</h5>
+                    <p class="card-text">Harga : Rp13.000,-</p>
                 </div>
             </div>
 
@@ -29,8 +29,8 @@
             <div class="card menu-item" style="width: 18rem;">
                 <img src="{{ asset('images/waffle.jpg') }}" class="card-img-top img-fluid" alt="Menu 2">
                 <div class="card-body">
-                    <h5 class="card-title">Menu 2</h5>
-                    <p class="card-text">Price: $12.99</p>
+                    <h5 class="card-title">Wafel Coklat</h5>
+                    <p class="card-text">Harga : Rp15.000,-</p>
                 </div>
             </div>
         </div>
@@ -44,8 +44,8 @@
             <div class="card menu-item" style="width: 18rem;">
                 <img src="{{ asset('images/matcha-milk.jpg') }}" class="card-img-top img-fluid" alt="Menu 3">
                 <div class="card-body">
-                    <h5 class="card-title">Menu 3</h5>
-                    <p class="card-text">Price: $14.99</p>
+                    <h5 class="card-title">Milky Matcha</h5>
+                    <p class="card-text">Harga : Rp12.000,-</p>
                 </div>
             </div>
 
@@ -53,8 +53,8 @@
             <div class="card menu-item" style="width: 18rem;">
                 <img src="{{ asset('images/americano.jpg') }}" class="card-img-top img-fluid" alt="Menu 4">
                 <div class="card-body">
-                    <h5 class="card-title">Menu 4</h5>
-                    <p class="card-text">Price: $16.99</p>
+                    <h5 class="card-title">Americano</h5>
+                    <p class="card-text">Harga : Rp10.000,-</p>
                 </div>
             </div>
         </div>
@@ -91,6 +91,7 @@
             <input type="text" class="form-control" id="totalPrice" name="total_price" readonly>
         </div>
 
+        <br>
         <button type="submit" class="btn-custom">Place Order</button>
     </form>
 </div>
@@ -98,10 +99,10 @@
     $(document).ready(function() {
         // Define menu prices
         const menuPrices = {
-            '1': 10.99,
-            '2': 12.99,
-            '3': 14.99,
-            '4': 16.99,
+            '1': 13000,
+            '2': 15000,
+            '3': 12000,
+            '4': 10000,
         };
 
         function updateTotalPrice() {
