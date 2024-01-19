@@ -23,14 +23,11 @@
         </div>
         <!-- /.container-fluid -->
     </div>
-    <!-- /.content-header -->
+
     @endsection
 
     @section('content')
-    <!-- Main content -->
-    
     @endsection
-    <!-- /.content-wrapper -->
 
     @section('custom-scripts')
     @endsection

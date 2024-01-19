@@ -25,7 +25,7 @@ use App\Http\Controllers\DashboardController;
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return view('home0');
+    return view('dashboard_order');
 });
 
 Route::get('/login', [PageController::class, 'loginPage']);
@@ -40,5 +40,9 @@ Route::get('/menu', [OrderController::class, 'menu']);
 Route::get('/about_us', [AboutController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/dashboard-customer', [DashboardController::class, 'customer']);
+Route::get('/dashboard-order', [DashboardController::class, 'orders'])->name('dashboard.orders');
+
 Route::get('/order-history', [OrderController::class, 'orderHistory'])->name('order.history');
 Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
+
+Route::get('/search', [DashboardController::class, 'search'])->name('search');
